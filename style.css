@@ -596,6 +596,14 @@ footer img {
 }
 
 @media (max-width: 48em) {
+  header {
+    padding-bottom: 8rem;
+  }
+
+  .header-container {
+    min-height: 7.2rem;
+  }
+
   .main-nav {
     position: fixed;
     top: 0;
@@ -624,17 +632,15 @@ footer img {
     font-size: 2.4rem;
   }
 
-
   .burger-menu {
     display: block;
   }
-
 
   .hellrent-start-btn {
     display: none;
   }
 
-  .header-container {
-    height: 7.2rem;
+  .download-section {
+    padding-top: 8rem;
   }
 }
