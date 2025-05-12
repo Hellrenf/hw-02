@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hellrent Wireframe</title>
+</head>
+
+<body>
+  <div class="modal" id="modalWindow">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Детальна інформація</h2>
+      <div class="modal-body">
+        <p>Hellrent Старт - це програма, яка допоможе вам почати ваш бізнес з оренди нерухомості. Ви отримаєте повну
+          підтримку від наших фахівців та зможете швидко запустити свій перший об'єкт.</p>
+        <ul>
+          <li>Персональний наставник</li>
+          <li>Допомога з оформленням документів</li>
+          <li>Поради щодо фотографій та опису</li>
+          <li>Аналіз ринку та конкурентів</li>
+          <li>Стратегія ціноутворення</li>
+        </ul>
+        <form id="contactModalForm" class="modal-form">
+          <h3>Залишити заявку</h3>
+          <div class="form-group">
+            <label for="modalName">Ім'я</label>
+            <input type="text" id="modalName" name="name" placeholder="Ваше ім'я">
+          </div>
+          <div class="form-group">
+            <label for="modalPhone">Телефон</label>
+            <input type="tel" id="modalPhone" name="phone" placeholder="+380501234567">
+          </div>
+          <div class="form-group">
+            <label for="modalEmail">Email</label>
+            <input type="email" id="modalEmail" name="email" placeholder="your@email.com">
+          </div>
+          <button type="submit" class="hellrent-start-btn">Надіслати заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo-link">
+        <img src="img/logo.png" alt="Hellrent Logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Завантажте</a></li>
+          <li><a href="#about" class="nav-link">Обирай</a></li>
+          <li><a href="#services" class="nav-link">Запустіть</a></li>
+          <li><a href="#contact" class="nav-link">Відповіді</a></li>
+        </ul>
+      </nav>
+
+      <button class="burger-menu" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="burger-icon"></span>
+      </button>
+
+      <button class="hellrent-start-btn desktop-btn" id="openModalBtn">Hellrent Старт</button>
+
+      <div class="mobile-menu-overlay" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-content">
+          <div class="mobile-menu-header">
+            <a href="#" class="logo-link mobile-logo-link">
+              <img src="img/logo.png" alt="Hellrent Logo" class="logo mobile-logo" />
+            </a>
+            <button class="close-menu" aria-label="Закрити меню">
+              <span class="close-icon"></span>
+            </button>
+          </div>
+
+          <div class="mobile-menu-body">
+            <nav class="mobile-nav" aria-label="Мобільна навігація">
+              <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Головна</a></li>
+                <li><a href="#about" class="mobile-nav-link">Про нас</a></li>
+                <li><a href="#services" class="mobile-nav-link">Послуги</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Контакти</a></li>
+              </ul>
+            </nav>
+            <div class="mobile-cta">
+              <button class="hellrent-start-btn mobile-btn" id="openModalBtnMobile">Hellrent Старт</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="download-section">
+    <div class="container download-section-container">
+      <div class="info-container">
+        <h1 class="cta">Завантажте Hellrent.</h1>
+        <p class="you-can-make-paragraph">Ви можете заробити</p>
+        <p class="money">$12,345</p>
+        <p class="nights-paragraph">
+          <span class="nights">1 ніч</span>, приблизно $12,345
+        </p>
+        <div class="input-container">
+          <input type="range" class="range-input" value="0" />
+        </div>
+        <div class="link-container">
+          <a href="#" class="more-about">Докладніше про аналіз заробітку.</a>
+        </div>
+      </div>
+      <div class="download-img-container">
+        <img src="img/house.webp" alt="House" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="choose-section">
+    <div class="container choose-section-container">
+      <h2 class="choose-heading">Обирай "Hellrent Старт"</h2>
+      <div class="choose-img-container">
+        <img src="img/hellrent-start.webp" alt="Hellrent Start" />
+      </div>
+      <div class="description-container">
+        <div class="description">
+          <h3 class="description-heading">
+            Поради від особистого наставника
+          </h3>
+          <p class="description-text">
+            Ми познайомимо вас із суперхостом у вашому регіоні, який допоможе
+            вам розібратися з будь-якими питаннями — від найважливіших до
+            дрібниць. Ви зможете спілкуватися в чаті, або навіть
+            зідзвонюватися по телефону чи відео.
+          </p>
+        </div>
+        <div class="description">
+          <h3 class="description-heading">
+            Перше бронювання — лише для досвідченого мандрівника
+          </h3>
+          <p class="description-text">
+            За бажанням, перше бронювання зможе зробити лише гість, який має
+            за плечима щонайменше три поїздки та відмінну репутацію на
+            Hellrent.
+          </p>
+        </div>
+        <div class="description">
+          <h3 class="description-heading">
+            Спеціалізована підтримка від Hellrent
+          </h3>
+          <p class="description-text">
+            Нові користувачі можуть одним натисканням зв'язатися з фахівцями
+            служби підтримки, які швидко вирішують будь-які питання — від
+            проблем з акаунтом до виставлення рахунків.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="slider-section" class="swiper-section">
+    <div class="container">
+      <h2 class="swiper-heading">Популярні варіанти житла</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="property-card">
+              <div class="property-img">
+                <img src="img/1.webp" alt="Property 1">
+              </div>
+              <div class="property-info">
+                <h3>Сучасна квартира з видом на море</h3>
+                <p class="property-location">Одеса, Україна</p>
+                <p class="property-price">$85 / ніч</p>
+                <button class="btn property-btn">Деталі</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="property-card">
+              <div class="property-img">
+                <img src="img/2.webp" alt="Property 2">
+              </div>
+              <div class="property-info">
+                <h3>Затишний котедж в горах</h3>
+                <p class="property-location">Буковель, Україна</p>
+                <p class="property-price">$120 / ніч</p>
+                <button class="btn property-btn">Деталі</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="property-card">
+              <div class="property-img">
+                <img src="img/3.webp" alt="Property 3">
+              </div>
+              <div class="property-info">
+                <h3>Історичний лофт в центрі міста</h3>
+                <p class="property-location">Львів, Україна</p>
+                <p class="property-price">$95 / ніч</p>
+                <button class="btn property-btn">Деталі</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="property-card">
+              <div class="property-img">
+                <img src="img/house.webp" alt="Property 4">
+              </div>
+              <div class="property-info">
+                <h3>Сучасний будинок біля озера</h3>
+                <p class="property-location">Шацьк, Україна</p>
+                <p class="property-price">$150 / ніч</p>
+                <button class="btn property-btn">Деталі</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="property-card">
+              <div class="property-img">
+                <img src="img/hellrent-start.webp" alt="Property 5">
+              </div>
+              <div class="property-info">
+                <h3>Пентхаус з терасою</h3>
+                <p class="property-location">Київ, Україна</p>
+                <p class="property-price">$200 / ніч</p>
+                <button class="btn property-btn">Деталі</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="hellrent-partners-section">
+    <div class="container hellrent-partners-container">
+      <h2 class="hellrent-partners-heading">
+        Потрібне житло для прийому гостей? Можливо, вам підійдуть апартаменти
+        в будинках — партнерах Hellrent
+      </h2>
+      <div class="partners-container">
+        <div class="partner-img-container">
+          <img src="img/1.webp" alt="1st Partner" />
+        </div>
+        <div class="partner-img-container">
+          <img src="img/2.webp" alt="2nd Partner" />
+        </div>
+        <div class="partner-img-container">
+          <img src="img/3.webp" alt="3rd Partner" />
+        </div>
+      </div>
+      <p class="hellrent-partners-text">
+        Ми співпрацюємо з багатоквартирними будинками по всій Україні. Ви
+        можете орендувати житло для себе і частину часу здавати його через
+        Hellrent. Як правило, власник заробляє 12345$ на рік, приймаючи гостей
+        протягом місяця.
+      </p>
+      <div class="btn-container">
+        <button class="btn">Шукати міста</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="truncated-text-section" class="truncated-text-section">
+    <div class="container">
+      <h2 class="section-heading">Докладніше про Hellrent Старт</h2>
+      <div class="truncated-content">
+        <p id="truncatedText" class="truncated">
+          Програма Hellrent Старт розроблена спеціально для нових господарів, щоб зробити початок вашого шляху
+          максимально комфортним та прибутковим.
+          Ми надаємо повну підтримку на всіх етапах: від реєстрації житла до отримання перших гостей.
+          Наші експерти проаналізували тисячі успішних оголошень та виділили ключові фактори, які впливають на успіх.
+          Ми знаємо, як зробити ваше оголошення привабливим для гостей, як правильно встановити ціни та які додаткові
+          послуги запропонувати.
+          Ще однією перевагою програми є те, що ви отримуєте доступ до закритої спільноти успішних господарів,
+          де можете обмінюватися досвідом та отримувати цінні поради.
+          Також ми регулярно проводимо вебінари та навчальні сесії, присвячені різним аспектам бізнесу з оренди житла.
+          Наші дослідження показують, що господарі, які беруть участь у програмі Hellrent Старт, заробляють у середньому
+          на 40% більше протягом першого року,
+          ніж ті, хто починає самостійно. Це суттєва різниця, яка дозволяє швидше окупити інвестиції та почати
+          отримувати стабільний прибуток.
+          Крім того, ми допомагаємо з налаштуванням системи автоматизації, яка дозволяє заощадити час на рутинних
+          операціях та сконцентруватися на поліпшенні якості обслуговування гостей.
+          Приєднуйтесь до програми Hellrent Старт сьогодні та почніть свій шлях до успішного бізнесу з оренди житла!
+        </p>
+        <button id="toggleTextBtn" class="btn toggle-btn">Показати більше</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="comparison-section">
+    <div class="container">
+      <h2 class="comparison-heading">Запустіть свій Hellrent з повним захистом</h2>
+
+      <div class="comparison-table">
+        <div class="comparison-header">
+          <div class="comparison-header-empty"></div>
+          <div class="comparison-header-cell">Hellrent</div>
+          <div class="comparison-header-cell">Конкуренти</div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-feature">
+            <h3>Перевірка особистості гостя</h3>
+            <p>При бронюванні гостьової платформи система перевіряє ім'я, адресу, посвідчення особи державного зразка та
+              інші дані.</p>
+          </div>
+          <div class="comparison-value-container">
+            <div class="comparison-value yes">
+              <img src="img/yes.png" alt="Так">
+            </div>
+            <div class="comparison-value no">
+              <img src="img/no.png" alt="Ні">
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-feature">
+            <h3>Перевірка бронювань</h3>
+            <p>Наша система аналізує безліч факторів і блокує бронювання, які мають високу ймовірність організації
+              вечірок або завдання шкоди майну.</p>
+          </div>
+          <div class="comparison-value-container">
+            <div class="comparison-value yes">
+              <img src="img/yes.png" alt="Так">
+            </div>
+            <div class="comparison-value no">
+              <img src="img/no.png" alt="Ні">
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-feature">
+            <h3>Захист від збитків на 2 млн $</h3>
+            <p>Hellrent компенсує збитки, завдані гостями вашому житлу та майну.</p>
+          </div>
+          <div class="comparison-value-container">
+            <div class="comparison-value yes">
+              <img src="img/yes.png" alt="Так">
+            </div>
+            <div class="comparison-value no">
+              <img src="img/no.png" alt="Ні">
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-feature">
+            <h3>Страхування на 1 млн $</h3>
+            <p>Ви забезпечені захистом у випадках, коли гість зазнає травм або його речі пошкоджені чи вкрадені.</p>
+          </div>
+          <div class="comparison-value-container">
+            <div class="comparison-value yes">
+              <img src="img/yes.png" alt="Так">
+            </div>
+            <div class="comparison-value no">
+              <img src="img/no.png" alt="Ні">
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-feature">
+            <h3>Цілодобовий екстрений зв'язок</h3>
+            <p>Якщо ви опинитеся в небезпеці, відкрийте додаток і одним натисканням зв'яжіться з фахівцями служби
+              підтримки, які пройшли спеціальне навчання.</p>
+          </div>
+          <div class="comparison-value-container">
+            <div class="comparison-value yes">
+              <img src="img/yes.png" alt="Так">
+            </div>
+            <div class="comparison-value no">
+              <img src="img/no.png" alt="Ні">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <button class="btn">Докладніше</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-form-section" class="contact-form-section">
+    <div class="container">
+      <h2 class="contact-heading">Зв'яжіться з нами</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name="name" placeholder="Ваше ім'я">
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+380501234567">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="propertyType">Тип нерухомості</label>
+            <select id="propertyType" name="propertyType">
+              <option value="">Оберіть тип нерухомості</option>
+              <option value="apartment">Квартира</option>
+              <option value="house">Будинок</option>
+              <option value="villa">Вілла</option>
+              <option value="room">Кімната</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Повідомлення</label>
+          <textarea id="message" name="message" placeholder="Ваше повідомлення" rows="5"></textarea>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="terms" name="terms">
+          <label for="terms">Я погоджуюсь з умовами використання та політикою конфіденційності</label>
+        </div>
+        <button type="submit" class="hellrent-start-btn submit-btn">Надіслати</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="comparison" class="qa-section">
+    <div class="container">
+      <h2 class="qa-heading">Відповіді на всі питання</h2>
+      <div class="accordion-container">
+
+        <div class="accordion-item">
+          <button class="accordion-button">
+            <span>Чи підходить моє житло для Hellrent?</span>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Hellrent приймає різноманітні типи житла — від квартир-студій до великих будинків. Ключові вимоги:</p>
+            <ul>
+              <li>Чисте та безпечне приміщення</li>
+              <li>Базові зручності (ліжко, ванна кімната, кухня)</li>
+              <li>Відповідність місцевим нормам безпеки</li>
+            </ul>
+            <p>Якщо ви сумніваєтесь, скористайтеся нашим безкоштовним сервісом оцінки житла, і ми надамо вам персональні
+              рекомендації.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">
+            <span>Чи обов'язково приймати гостей постійно?</span>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Ні, ви маєте повний контроль над своїм календарем доступності. На Hellrent ви можете:</p>
+            <ul>
+              <li>Самостійно обирати дати, коли ви готові приймати гостей</li>
+              <li>Блокувати дати, коли житло вам потрібне</li>
+              <li>Встановлювати мінімальну та максимальну тривалість перебування</li>
+              <li>Налаштовувати автоматичне блокування дат до/після бронювань</li>
+            </ul>
+            <p>Багато власників здають житло тільки на вихідні або лише кілька місяців на рік — ви вирішуєте!</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">
+            <span>Як часто потрібно контактувати із гостями?</span>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Рівень взаємодії з гостями залежить від вашого стилю господарювання та типу житла:</p>
+            <ul>
+              <li>Обов'язкова комунікація: підтвердження бронювання, інструкції з заселення, відповіді на запитання</li>
+              <li>Рекомендовано: вітальне повідомлення після заселення та прощальне перед виїздом</li>
+              <li>Додатково: рекомендації щодо місцевих визначних місць та закладів</li>
+            </ul>
+            <p>Наші дослідження показують, що швидкі та чіткі відповіді підвищують ймовірність отримання позитивних
+              відгуків. Hellrent пропонує шаблони повідомлень та автоматичні відповіді для спрощення комунікації.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">
+            <span>Що б ви мені порадили, аби досягти успіху?</span>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Найуспішніші господарі на Hellrent дотримуються таких принципів:</p>
+            <ul>
+              <li><strong>Точний опис та якісні фото</strong> — реалістичні очікування гостей запобігають непорозумінням
+              </li>
+              <li><strong>Чистота і порядок</strong> — найчастіша причина позитивних відгуків</li>
+              <li><strong>Швидкі відповіді</strong> — намагайтеся відповідати протягом кількох годин</li>
+              <li><strong>Персональний підхід</strong> — невеликі додаткові послуги можуть значно підвищити
+                задоволеність гостей</li>
+              <li><strong>Конкурентні ціни</strong> — використовуйте наш інструмент аналізу цін для оптимального
+                ціноутворення</li>
+            </ul>
+            <p>Зверніться до нашої програми "Hellrent Старт" для отримання персональних порад від досвідчених
+              суперхостів.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-button">
+            <span>Які збори стягує Hellrent?</span>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Hellrent використовує просту та прозору структуру комісій:</p>
+            <ul>
+              <li>Господарі: стандартна плата 3% від суми бронювання, включаючи послуги обробки платежів</li>
+              <li>Гості: сервісний збір від 5% до 15% від вартості бронювання, залежно від різних факторів</li>
+            </ul>
+            <p>Додаткові витрати можуть включати:</p>
+            <ul>
+              <li>Плата за прибирання (якщо встановлено господарем)</li>
+              <li>Податок на проживання (залежно від місцевості)</li>
+              <li>Застава (повністю повертається за відсутності пошкоджень)</li>
+            </ul>
+            <p>Зверніть увагу, що Hellrent не стягує плату за створення оголошення або підтримку акаунту — ви платите
+              лише коли отримуєте бронювання.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-column">
+          <h4 class="footer-heading">Підтримка</h4>
+          <ul class="footer-links">
+            <li><a href="#">Центр допомоги</a></li>
+            <li><a href="#">HellCover</a></li>
+            <li><a href="#">Боротьба з дискримінацією</a></li>
+            <li><a href="#">Допомога людям з інвалідністю</a></li>
+            <li><a href="#">Скасування під час пандемії</a></li>
+            <li><a href="#">Повідомити про проблему в районі</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Прийом гостей</h4>
+          <ul class="footer-links">
+            <li><a href="#">Здайте житло на Hellrent</a></li>
+            <li><a href="#">HellCover для господарів</a></li>
+            <li><a href="#">Матеріали для господарів</a></li>
+            <li><a href="#">Форум спільноти</a></li>
+            <li><a href="#">Відповідальний прийом гостей</a></li>
+            <li><a href="#">Безкоштовний урок прийому гостей</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Hellrent</h4>
+          <ul class="footer-links">
+            <li><a href="#">Прес-центр</a></li>
+            <li><a href="#">Нові функції</a></li>
+            <li><a href="#">Кар'єра в Hellrent</a></li>
+            <li><a href="#">Для інвесторів</a></li>
+            <li><a href="#">Подарункові картки</a></li>
+            <li><a href="#">Прийом гостей на Hellrent.ua</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Приєднуйтесь до нас</h4>
+          <div class="newsletter-form">
+            <p>Будьте в курсі новин та спеціальних пропозицій</p>
+            <div class="form-group">
+              <input type="email" placeholder="Ваша електронна пошта" class="newsletter-input">
+              <button class="newsletter-button">Підписатися</button>
+            </div>
+          </div>
+          <div class="social-media">
+            <a href="#" aria-label="Twitter"><img src="img/twitter.png" alt="Twitter" class="social-icon"></a>
+            <a href="#" aria-label="Facebook"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram" class="social-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; Hellrent, Inc. Усі права захищені.</p>
+        </div>
+
+        <div class="footer-meta">
+          <div class="language-currency">
+            <a href="#" class="meta-item">
+              <img src="img/world.png" alt="Мова" class="meta-icon">
+              <span>Українська</span>
+            </a>
+            <a href="#" class="meta-item">
+              <span>$ USD</span>
+            </a>
+          </div>
+
+          <ul class="footer-legal">
+            <li><a href="#">Конфіденційність</a></li>
+            <li><a href="#">Умови використання</a></li>
+            <li><a href="#">Карта сайту</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="mobile-menu.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
